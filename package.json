@@ -1,0 +1,25 @@
+{
+  "name": "ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bytangle/blockchain-practice-contracts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bytangle/blockchain-practice-contracts/issues"
+  },
+  "homepage": "https://github.com/bytangle/blockchain-practice-contracts#readme",
+  "dependencies": {
+    "@openzeppelin/upgrades": "^2.8.0"
+  }
+}
