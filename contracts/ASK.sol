@@ -56,6 +56,12 @@ contract ASK {
         _;
     }
 
+    /// @dev guarded against multiple registration by a single airline
+    modifier notAMember {
+        require(!_membership[msg.sender], "You are already a member");
+        _;
+    }
+
     constructor() payable {
         // authomatically register the deployer as the chairperson
         _chairperson = msg.sender;
@@ -71,7 +77,7 @@ contract ASK {
     }
 
     /// @notice airlines registration
-    function register() public payable {
+    function register() public payable notAMember {
         // setup airline details
         Details memory airline;
         airline.escrow = msg.value;
