@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity ^0.8.16;
+pragma solidity ^0.8.0;
 
 /// @dev illustration of state machine and access restriction design patterns
 contract FundRaising {

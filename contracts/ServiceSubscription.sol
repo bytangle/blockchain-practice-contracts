@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity ^0.8.16;
+pragma solidity ^0.8.0;
 
-/// @dev subscriber data structure
+/// @title subscriber data structure
 struct Subscriber {
     address addr; // address of subscriber
     uint256 subscriptionDate; // in millisecond

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0
 
-import "contracts/FundRaising.sol" as josh;
+import "./FundRaising.sol" as josh;
 
-pragma solidity ^0.8.16;
+pragma solidity ^0.8.0;
 
 struct IndexValue { uint keyIndex; uint value; }
 struct KeyFlag { uint key; bool deleted; }
