@@ -15,21 +15,19 @@ const httpConfig = {
 // connect to network
 const eth = new Eth(new HttpProvider("http://127.0.0.1:7545", httpConfig));
 
-// connect to contract
-const contract = new eth.Contract(FundRaising.abi, contractAddr);
-
 
 async function main() {
     const accts = await eth.getAccounts();
 
-    eth.defaultAccount = accts[0];
-    contract.defaultAccount = accts[0];
+    console.log(accts);
 
-    console.log("Default account: ", eth.defaultAccount);
-    console.log("Contract default account: ", contract.defaultAccount);
+    // connect to contract
+    const contract = new eth.Contract(FundRaising.abi, contractAddr, {
+        from: accts[0]
+    });
 
     /// call beginFundRaising function
-    const kall = await contract.methods["0x7fbc6622"](2).call();
+    const kall = await contract.methods["0x7fbc6622"](2).send().then(r => console.log(r));
     //const kall = await contract.methods.getDonationDetails().call();
     console.log(kall);
 }
