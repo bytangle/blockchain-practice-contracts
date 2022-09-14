@@ -1,5 +1,5 @@
-const ASK = artifacts.require("ASK");
+const FundRaising = artifacts.require("FundRaising");
 
 module.exports = (deployer) => {
-    deployer.deploy(ASK);
+    deployer.deploy(FundRaising);
 }

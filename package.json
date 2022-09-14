@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/bytangle/blockchain-practice-contracts#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3"
+    "@openzeppelin/contracts": "^4.7.3",
+    "ethers": "^5.7.0",
+    "web3": "^1.7.5"
   }
 }

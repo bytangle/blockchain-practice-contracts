@@ -64,6 +64,10 @@ contract FundRaising {
         _;    
     }
 
+    constructor() {
+        _admin = msg.sender;
+    }
+
     /**
      * @notice start fund raising
      * @param _target amount to achieve
