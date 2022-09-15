@@ -24,7 +24,7 @@ async function main() {
 
     FR.deploy({
         data: ServiceSubscription.bytecode,
-        //arguments: [Web3Utils.toWei("5")]
+        arguments: [Web3Utils.toWei("5")]
     })//.estimateGas().then(r => console.log(r));
     .send({
         from: addresses[0],
